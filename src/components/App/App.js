@@ -6,13 +6,12 @@ import { apiMovieData } from '../../api';
 import { addMovieData } from '../../actions/actionIndex';
 import './App.css';
 import PropTypes from 'prop-types';
-
-
 //components:
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 
 export class App extends Component {
+  
   async componentDidMount() {
     const movies = await this.getInitialData();
 
