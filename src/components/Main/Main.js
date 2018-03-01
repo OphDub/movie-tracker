@@ -22,7 +22,7 @@ export const Main = ({loginStatus}) => (
   </Switch>
 )
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   loginStatus: state.activeUser
 });
 

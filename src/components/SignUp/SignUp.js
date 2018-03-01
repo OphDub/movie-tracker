@@ -89,11 +89,11 @@ export class SignUp extends Component {
   }
 }
 
-const mapDispatch = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   handleLogin: (user) => dispatch(activeUserAction(user)),
 })
 
-export default connect(null, mapDispatch)(SignUp);
+export default connect(null, mapDispatchToProps)(SignUp);
 
 SignUp.propTypes = {
   handleLogin: PropTypes.func.isRequired

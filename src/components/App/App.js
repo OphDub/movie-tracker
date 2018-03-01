@@ -36,15 +36,15 @@ export class App extends Component {
   }
 }
 
-const mapState = (state) => ({
+export const mapStateToProps = (state) => ({
  loginStatus: state.activeUser
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
  getMovieData: (data) => dispatch(addMovieData(data)),
 });
 
-export default withRouter(connect(mapState, mapDispatchToProps)(App));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 
 App.propTypes = {
   getMovieData: PropTypes.func,
