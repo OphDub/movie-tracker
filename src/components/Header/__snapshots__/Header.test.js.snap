@@ -27,6 +27,18 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="nav-container"
+        >
+          <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="nav"
+            to="/login"
+          >
+            Login/Sign-up
+          </NavLink>
+        </div>,
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
@@ -36,28 +48,44 @@ ShallowWrapper {
             Movie Tracker
           </h1>
         </NavLink>,
-        <NavLink
-          activeClassName="active"
-          ariaCurrent="true"
-          className="nav"
-          to="/login"
-        >
-          Login
-        </NavLink>,
-        <NavLink
-          activeClassName="active"
-          ariaCurrent="true"
-          to="/favorites"
-        >
-          <button>
-            Show Favorites
-          </button>
-        </NavLink>,
         undefined,
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="nav"
+            to="/login"
+          >
+            Login/Sign-up
+          </NavLink>,
+          "className": "nav-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "Login/Sign-up",
+            "className": "nav",
+            "to": "/login",
+          },
+          "ref": null,
+          "rendered": "Login/Sign-up",
+          "type": [Function],
+        },
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -84,47 +112,6 @@ ShallowWrapper {
         },
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "ariaCurrent": "true",
-          "children": "Login",
-          "className": "nav",
-          "to": "/login",
-        },
-        "ref": null,
-        "rendered": "Login",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "activeClassName": "active",
-          "ariaCurrent": "true",
-          "children": <button>
-            Show Favorites
-          </button>,
-          "to": "/favorites",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Show Favorites",
-          },
-          "ref": null,
-          "rendered": "Show Favorites",
-          "type": "button",
-        },
-        "type": [Function],
-      },
       undefined,
     ],
     "type": "header",
@@ -136,6 +123,18 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="nav-container"
+          >
+            <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              className="nav"
+              to="/login"
+            >
+              Login/Sign-up
+            </NavLink>
+          </div>,
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
@@ -145,28 +144,44 @@ ShallowWrapper {
               Movie Tracker
             </h1>
           </NavLink>,
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            className="nav"
-            to="/login"
-          >
-            Login
-          </NavLink>,
-          <NavLink
-            activeClassName="active"
-            ariaCurrent="true"
-            to="/favorites"
-          >
-            <button>
-              Show Favorites
-            </button>
-          </NavLink>,
           undefined,
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              className="nav"
+              to="/login"
+            >
+              Login/Sign-up
+            </NavLink>,
+            "className": "nav-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": "Login/Sign-up",
+              "className": "nav",
+              "to": "/login",
+            },
+            "ref": null,
+            "rendered": "Login/Sign-up",
+            "type": [Function],
+          },
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -190,47 +205,6 @@ ShallowWrapper {
             "ref": null,
             "rendered": "Movie Tracker",
             "type": "h1",
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "ariaCurrent": "true",
-            "children": "Login",
-            "className": "nav",
-            "to": "/login",
-          },
-          "ref": null,
-          "rendered": "Login",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "activeClassName": "active",
-            "ariaCurrent": "true",
-            "children": <button>
-              Show Favorites
-            </button>,
-            "to": "/favorites",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Show Favorites",
-            },
-            "ref": null,
-            "rendered": "Show Favorites",
-            "type": "button",
           },
           "type": [Function],
         },

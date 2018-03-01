@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { MovieContainer } from './MovieContainer';
+import { MovieContainer, mapStateToProps, mapDispatchToProps } from './MovieContainer';
 import { shallow } from 'enzyme';
 import { cleanMovieArray, userData, oneMovie, movieRawData } from '../../mock-data.js';
 
@@ -46,4 +46,25 @@ describe('MovieContainer', () => {
     expect(mockFunction).toHaveBeenCalled()
   })
 
+  describe('mapStateToProps and mapDispatchToProps for MovieContainer', () => {
+    it('should map the store correctly', () => {
+      const mockUser = { id: 4, name: 'bruce', password: 'pass' };
+      const mockStore = {
+        activeUser: mockUser
+      };
+
+      const mapped = mapStateToProps(mockStore);
+
+      expect(mapped.activeUser).toEqual(mockStore.activeUser);
+    });
+
+    it('should call the dispatch func when sendFavorite is called', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
+
+      mapped.addFavorite();
+
+      expect(mockDispatch).toHaveBeenCalled();
+    });
+  });
 });

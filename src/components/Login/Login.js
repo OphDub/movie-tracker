@@ -79,11 +79,11 @@ export class Login extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   activeUser: state.activeUser,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   handleLogin: (user) => dispatch(activeUserAction(user)),
   addFavorite: (favoriteData) => dispatch(addFavoriteAction(favoriteData)),
 });

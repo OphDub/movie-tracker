@@ -68,17 +68,17 @@ export class MovieContainer extends Component {
   }
 }
 
-const mapStateToProps = ({movieArray, activeUser, favoriteArray}) => ({
+export const mapStateToProps = ({movieArray, activeUser, favoriteArray}) => ({
   movieArray,
   activeUser,
   favoriteArray,
 })
 
-const mapDispatch = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   addFavorite: (favoriteData) => dispatch(addFavoriteAction(favoriteData))
 })
 
-export default connect(mapStateToProps, mapDispatch)(MovieContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(MovieContainer)
 
 MovieContainer.propTypes = {
   favoriteArray: PropTypes.array.isRequired,

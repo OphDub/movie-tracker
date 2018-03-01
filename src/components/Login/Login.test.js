@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { Login } from './Login';
+import { Login, mapStateToProps, mapDispatchToProps } from './Login';
 import { shallow } from 'enzyme';
 import { userData, cleanMovieArray } from '../../mock-data.js';
 
@@ -37,5 +37,27 @@ describe('Login', () => {
     });
 
     expect(wrapper.instance().getFavorites(userData)).resolves.toEqual(cleanMovieArray)
+  });
+
+  describe('mapStateToProps and mapDispatchToProps for Login', () => {
+    it('should map the store correctly', () => {
+      const mockUser = { id: 4, name: 'bruce', password: 'pass' };
+      const mockStore = {
+        activeUser: mockUser
+      };
+
+      const mapped = mapStateToProps(mockStore);
+
+      expect(mapped.activeUser).toEqual(mockStore.activeUser);
+    });
+
+    it('should call the dispatch func when sendFavorite is called', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
+
+      mapped.handleLogin();
+
+      expect(mockDispatch).toHaveBeenCalled();
+    });
   });
 });

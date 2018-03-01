@@ -49,16 +49,16 @@ export class FavoriteContainer extends Component {
   }
 }
 
-const mapState = (state) => ({
+export const mapStateToProps = (state) => ({
   activeUser: state.activeUser,
   favoriteArray: state.favoriteArray,
 })
 
-const mapDispatch = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   sendFavorite: (favoriteData) => dispatch(addFavoriteAction(favoriteData)),
 })
 
-export default withRouter(connect(mapState, mapDispatch)(FavoriteContainer));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FavoriteContainer));
 
 FavoriteContainer.propTypes = {
   favoriteArray: PropTypes.array.isRequired,

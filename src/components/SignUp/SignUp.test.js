@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { SignUp } from './SignUp';
+import { SignUp, mapDispatchToProps } from './SignUp';
 import { shallow } from 'enzyme';
 import { userData } from '../../mock-data.js';
 
@@ -40,5 +40,16 @@ describe('SignUp', () => {
     wrapper.update();
 
     expect(wrapper.state().errorStatus).toEqual(false);
+  });
+
+  describe('mapDispatchToProps for SignUp', () => {
+    it('should call the dispatch func when sendFavorite is called', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
+
+      mapped.handleLogin();
+
+      expect(mockDispatch).toHaveBeenCalled();
+    });
   });
 });

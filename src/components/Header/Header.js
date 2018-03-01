@@ -28,11 +28,11 @@ export const Header = ({loginStatus, logoutUser}) => {
   )
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   loginStatus: state.activeUser,
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   logoutUser: (login) => dispatch(logoutUser(login)),
 });
 
